@@ -1,0 +1,7 @@
+./kalibr_calibrate_cameras --target /home/samet/Desktop/april.yaml  --bag /home/samet/Desktop/pixhawk248raw.bag  --models pinhole-radtan --topics /camera/color/image_raw --show-extraction
+
+
+./kalibr_calibrate_imu_camera --target /home/samet/Desktop/april.yaml --bag /home/samet/Desktop/pixhawk248raw.bag --cam /home/samet/Desktop/pixhawk248raw.yaml --imu /home/samet/Desktop/imu2.yaml 
+
+rosrun bag_tools change_frame_id.py -o data1.bag -i 1.bag -f global -t /mavros/local_position/pose
+
